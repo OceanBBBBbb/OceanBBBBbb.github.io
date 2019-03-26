@@ -1,8 +1,6 @@
 ## Welcome to 宾海洋's Pages
 
-You can use the [editor on GitHub](https://github.com/OceanBBBBbb/OceanBBBBbb.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+整理一下线上和本地仓库的工程都是些什么，包含哪里功能，东西有点多，有时候要找一些写过的内容都找半天。
 
 ### Markdown
 
