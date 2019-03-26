@@ -42,6 +42,47 @@ def tran_it(housing):
 
 ```
 
-### Support or Contact
+### py-workspace\pc-28
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+这个厉害了，自己写的自动下单pc蛋蛋幸运28的程序，通过一定的交易策略，实现自动下注，从无到有盈利几百块后就被系统警告冻结了。非常好使，就是会封号。
+虽然自动下单会被封，但是爬取数据后做大数据分析或许可以给手动下单提供一些参考。
+###### 片段展示:
+```
+avg_times= 100# 理论上的平均值 86*3/10
+def forecast():
+    array_full = deal_data() #拿到数据
+    may_num = []
+    may_i=0
+    array_full_i=0
+    for value in array_full:
+        if(value<=avg_times*0.618):
+            may_num.insert(may_i,array_full_i)
+            may_i+=1
+        array_full_i+=1
+    print("本期可能的数字：")
+    print(may_num)
+    return may_num
+```
+
+### py-workspace\quant4stock
+股票量化交易的工程，里面只有简单的追涨杀跌的一个策略，还有富途牛牛的API都在里面，可以直接往里面加策略。
+github上同名的是这个。
+
+### py-workspace\sentiment-analysis
+下载来的一个文本情感分析的项目。只用了jieba库的文本情绪分析，可以分析txt/excel等文件内容的情感。但是这个应该准确度不高吧，里面用了多线程等内容可以看看。
+###### 片段展示:
+```
+def __analyse_clause(self, the_clause, runout_filepath, print_show):
+        sub_clause = {"score": 0, "positive": [], "negative": [], "conjunction": [], "punctuation": [], "pattern": []}
+        seg_result = posseg.lcut(the_clause)
+
+        # 将分句及分词结果写进运行输出文件，以便复查
+        if runout_filepath is not None:
+            self.__write_runout_file(runout_filepath, the_clause + '\n')
+            self.__write_runout_file(runout_filepath, str(seg_result) + '\n')
+        if print_show:
+            print(the_clause)
+            print(seg_result)
+```
+
+
