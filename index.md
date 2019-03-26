@@ -3,16 +3,16 @@
 整理一下线上和本地仓库的工程都是些什么，包含哪里功能，东西有点多，有时候要找一些写过的内容都找半天。
 前面是python的，后面是java的
 
-### py-workspace\HTornado-master
+### py\HTornado-master
 
-py-workspace\HTornado-master 实际是我的文库喵，是一个py的web应用，用的HTornado-master框架，前端翻版了百度首页，用户输入文库地址，现在还加了sina博客的url，然后可以下载页面的文档，或者文章内容。
+py\HTornado-master 实际是我的文库喵，是一个py的web应用，用的HTornado-master框架，前端翻版了百度首页，用户输入文库地址，现在还加了sina博客的url，然后可以下载页面的文档，或者文章内容。
 ![](https://github.com/OceanBBBBbb/OceanBBBBbb.github.io/blob/master/wenkumiao.jpg)  
 
 ```
 nothing to show
 ```
 
-### py-workspace\mlexcu
+### py\mlexcu
 
 这个应该是github上下载的一个机器学习的demo，关于房价的，还没仔细看，可以跑起来，原版的效果图看得不是很明白，可以改直观一些。
 ###### 片段展示:
@@ -42,7 +42,7 @@ def tran_it(housing):
 
 ```
 
-### py-workspace\pc-28
+### py\pc-28
 
 这个厉害了，自己写的自动下单pc蛋蛋幸运28的程序，通过一定的交易策略，实现自动下注，从无到有盈利几百块后就被系统警告冻结了。非常好使，就是会封号。
 虽然自动下单会被封，但是爬取数据后做大数据分析或许可以给手动下单提供一些参考。
@@ -64,11 +64,11 @@ def forecast():
     return may_num
 ```
 
-### py-workspace\quant4stock
+### py\quant4stock
 股票量化交易的工程，里面只有简单的追涨杀跌的一个策略，还有富途牛牛的API都在里面，可以直接往里面加策略。
 github上同名的是这个。
 
-### py-workspace\sentiment-analysis
+### py\sentiment-analysis
 下载来的一个文本情感分析的项目。只用了jieba库的文本情绪分析，可以分析txt/excel等文件内容的情感。但是这个应该准确度不高吧，里面用了多线程等内容可以看看。
 ###### 片段展示:
 ```
