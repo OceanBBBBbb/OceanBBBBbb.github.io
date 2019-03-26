@@ -3,6 +3,7 @@
 整理一下线上和本地仓库的工程都是些什么，包含哪里功能，东西有点多，有时候要找一些写过的内容都找半天。
 前面是python的，后面是java的
 
+
 ### py\HTornado-master
 
 py\HTornado-master 实际是我的文库喵，是一个py的web应用，用的HTornado-master框架，前端翻版了百度首页，用户输入文库地址，现在还加了sina博客的url，然后可以下载页面的文档，或者文章内容。
@@ -11,6 +12,7 @@ py\HTornado-master 实际是我的文库喵，是一个py的web应用，用的HT
 ```
 nothing to show
 ```
+
 
 ### py\mlexcu
 
@@ -42,6 +44,7 @@ def tran_it(housing):
 
 ```
 
+
 ### py\pc-28
 
 这个厉害了，自己写的自动下单pc蛋蛋幸运28的程序，通过一定的交易策略，实现自动下注，从无到有盈利几百块后就被系统警告冻结了。非常好使，就是会封号。
@@ -64,11 +67,15 @@ def forecast():
     return may_num
 ```
 
+
 ### py\quant4stock
+
 股票量化交易的工程，里面只有简单的追涨杀跌的一个策略，还有富途牛牛的API都在里面，可以直接往里面加策略。
 github上同名的是这个。
 
+
 ### py\sentiment-analysis
+
 下载来的一个文本情感分析的项目。只用了jieba库的文本情绪分析，可以分析txt/excel等文件内容的情感。但是这个应该准确度不高吧，里面用了多线程等内容可以看看。
 ###### 片段展示:
 ```
@@ -84,5 +91,64 @@ def __analyse_clause(self, the_clause, runout_filepath, print_show):
             print(the_clause)
             print(seg_result)
 ```
+
+
+### py\sentimentanalysis-master
+
+git上下载的项目。这个是含机器学习的文本分析，很多地方跑不起来的，只能学习和使用一些片段。
+
+
+### py\textrank-analy-commonts
+
+这个是自己写的文本分析，里面内容已经比较杂了。
+有pkuseg、jieba、word_cloud、textrank4zh、sklearn等内容，云图的练习，爬取豆瓣监督学习的那个代码就出自这个工程。
+###### 片段展示:
+```
+def proc_text(text):
+    # 分词
+    raw_words = jieba.cut(text, cut_all=True)
+    # 词形归一化
+    wordnet_lematizer = WordNetLemmatizer()
+    words = [wordnet_lematizer.lemmatize(raw_word) for raw_word in raw_words]
+    # True 表示该词在文本中，为了使用nltk中的分类器
+    return {word: True for word in words}
+```
+
+### py\venv
+
+这里面也是一个内容比较多的工程，为公司做的爬虫的代码主要都在这里面。
+还有一个开发安卓app的demo。
+###### 片段展示:
+```
+def get_db_url():
+    results = db_fob.get_all()
+    for row in results:
+        try:
+            time.sleep(1)
+            id = str(row[0])  #
+            qq = str(row[1])
+            # if(not qq.__contains__('未填写')):
+            #     youjian_img.get_img(qq,'qq_'+id)
+            email = str(row[2])
+            if(not email.__contains__('未填写')):
+                youjian_img.get_img(email,'email_'+id)
+        except Exception as e:
+            print(str(e))
+            pass
+get_db_url()
+```
+
+### py\wechat-article
+这里是第一个爬取微信公众号文章的爬虫程序，有通过搜狗搜索的，有公众号后台爬取的，后面加了网页转pdf(也就是为了转爬取的结果)，再后面遇到了验证码问题，这里还有PIL和图像识别的代码。
+还有一个爬虫美股invest的代码（有点儿乱）
+
+### py\wechat-article2
+这个是提炼了上个版本的爬微信文章的内容，完善了验证码破解，这里又有一个爬虫获取非小号数据的（周末整理一下把爬虫的抽取到一起）。
+还有一个比较厉害的auto_article、这个是爬取雅虎新闻调用百度翻译后，自己生产文章，并自动发布到我的头条号的!
+文章效果：https://www.toutiao.com/i6646546958032830983/
+
+
+### py\weiboanalysis
+网上的一个svm技术分析新浪微博情感分析的demo.
 
 
