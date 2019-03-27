@@ -152,3 +152,17 @@ get_db_url()
 网上的一个svm技术分析新浪微博情感分析的demo.
 
 
+### java\AI-kyc-server
+做完公司kyc服务系统后，觉得很多东西等待人工审核效率和准确性都是可以提升的，产品没往智能Kyc上提，自己想做一个可以根据自定义规则，程序自动审核用户资料，人工简单复审一下就可以了的程序。主要用到腾讯百度的免费API中一些证件识别的。
+
+### java\bdai
+调试连接百度、腾讯AI的API程序.
+
+### java\exchange-rate
+就是这里也有的exchange-rate，获取币价汇率的。
+
+### java\ocean_stock_trade
+美股交易的，还未完成。
+
+### java\robot-chat
+小海只能聊天机器人。
